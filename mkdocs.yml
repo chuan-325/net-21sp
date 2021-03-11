@@ -4,13 +4,15 @@ repo_name: chuan-325/net-21sp
 nav:
   - Home: index.md
   - Chapter 1 计算机网络概述: chap_01.md
+  - Chapter 2 直连网络: chap_02.md
 theme:
   name: material
   palette:
     primary: teal
+    accent: teal
   language: zh
   features:
-    - toc.integrate
+    # - toc.integrate
     - search.suggest
     - search.highlight
 markdown_extensions:
@@ -21,7 +23,7 @@ markdown_extensions:
       generic: true
   - toc:
       permalink: true
-      toc_depth: 4
+      toc_depth: 3
 plugins:
   - search:
 extra_javascript:

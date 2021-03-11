@@ -9,7 +9,7 @@ This is a course note collection for **Computer Network (21sp)** at University o
 ## Table of Contents
 
 - [Chapter 01: 计算机网络概述](chap_01.md)
-- Chapter 02:
+- [Chapter 02: 直连网络](chap_02.md)
 - Chapter 03:
 - Chapter 04:
 - Chapter 05:

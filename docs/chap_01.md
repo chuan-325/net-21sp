@@ -27,7 +27,7 @@
 
 当电路交换中的主机数量增加, 就引入了**交换机** (switch) 来完成全网的交换任务, "交换" 意为动态分配通信资源.
 
-![电路交换](chap_01.assets/c1-circuit-switching.png){: style="height:200px" align=right}
+![电路交换.](chap_01.assets/c1-circuit-switching.png){: style="height:200px" align=right}
 
 ##### 电路交换的步骤
 
@@ -78,7 +78,7 @@
 1. 收到分组后, 剥去分组的首部, 把数据恢复成为原来的报文
    - 这里我们假定分组在传输过程中没有出现差错, 在转发时也没有被丢弃
 
-![分组交换](chap_01.assets/c1-packet-switching.png){: style="height:300px" align=right}
+![分组交换.](chap_01.assets/c1-packet-switching.png){: style="height:300px" align=right}
 
 ##### 分组交换的特点
 
@@ -101,7 +101,7 @@
 
 #### 比较: 三种交换
 
-![比较三种交换](chap_01.assets/c1-compare-three-switch.png){: style="height:300px"}
+![比较三种交换.](chap_01.assets/c1-compare-three-switch.png){: style="height:300px"}
 
 - **电路交换**: 面向连接, 全程连续传输, 像通过一个 "固定" 的 pipe
 - **报文交换**: 整个报文的存储转发
@@ -126,7 +126,7 @@
 
 #### 不同类型的网络连接结构
 
-![网络连接结构](chap_01.assets/c1-nets.png){: style="height:400px" align=right}
+![网络连接结构.](chap_01.assets/c1-nets.png){: style="height:400px" align=right}
 
 **直连链路**: 所有的结点都是直连 (直接连通) 的
 
@@ -152,14 +152,14 @@
 
 #### 第二发展阶段: 建成三级结构的 Internet
 
-![phase 2](chap_01.assets/c1-Internet-phase-2.png){: style="height:130px" }
+![phase 2.](chap_01.assets/c1-Internet-phase-2.png){: style="height:130px" }
 
 - 三级: 主干网 - 地区网 - 校园网/企业网
 - 网络间通过路由器连接, 主机到主机的通信可能经过多种网络
 
 #### 第三发展阶段: 逐渐形成多层次 ISP 结构的 Internet
 
-![phase 3](chap_01.assets/c1-Internet-phase-3.png){: style="height:130px"}
+![phase 3.](chap_01.assets/c1-Internet-phase-3.png){: style="height:130px"}
 
 - **ISP** (Internet Service Provider): Internet 服务提供商, 如中国电信/联通/移动
 - **多宿** (multi-home): ISP 与两个或更多提供商 ISP 连接，保障可靠性; 任何 ISP (除了第一层 ISP) 都可选择多宿
@@ -194,7 +194,7 @@ Internet 标准制定的四个阶段:
 
 ###### 客户-服务器方式 (C/S, Client/Server)
 
-![c/s](chap_01.assets/c1-client-server.png){: style="height:200px"}
+![c/s.](chap_01.assets/c1-client-server.png){: style="height:200px"}
 
 C/S 描述的是进程之间服务和被服务的关系, **客户** (client) 和**服务器** (server) 指通信中涉及的两个应用进程.
 
@@ -207,7 +207,7 @@ C/S 描述的是进程之间服务和被服务的关系, **客户** (client) 和
 
 ###### 对等方式 (P2P, Peer to Peer)
 
-![p2p](chap_01.assets/c1-p2p.png){: style="height:200px"}
+![p2p.](chap_01.assets/c1-p2p.png){: style="height:200px"}
 
 采用 P2P 模式的通信中, 两个主机不区分服务请求方和服务提供方, 进行平等且对等的连接通信.
 
@@ -217,7 +217,7 @@ C/S 描述的是进程之间服务和被服务的关系, **客户** (client) 和
 
 #### 接入网 (Access Network)
 
-![access-network](chap_01.assets/c1-access-network.png){: style="height:200px"}
+![access-network.](chap_01.assets/c1-access-network.png){: style="height:200px"}
 
 **接入网**: 将端系统连接到**边缘路由器** (edge router)[^3] 的物理链路.
 
@@ -236,7 +236,7 @@ C/S 描述的是进程之间服务和被服务的关系, **客户** (client) 和
 
 #### 网络核心组成
 
-![c1-component-of-network-core](chap_01.assets/c1-component-of-network-core.png){: style="height:150px"}
+![c1-component-of-network-core.](chap_01.assets/c1-component-of-network-core.png){: style="height:150px"}
 
 网络核心由十多个第一层 ISP 和数十万个较低层 ISP 组成.
 
@@ -307,7 +307,7 @@ $$
 \text{发送时延} = \frac{\text{数据块长度 (单位: b)}}{\text{发送速率 (单位: b/s)}}
 $$
 
-**传播时延**: 电磁波在信道中需要传播一定的距离而花费的时间.
+**传播时延**: 电磁波在信道中传播一定的距离需要花费的时间.
 
 $$
 \text{传播时延} = \frac{\text{信道长度 (单位: m)}}{\text{信号在信道上的传播速率 (单位: m/s)}}
@@ -323,7 +323,7 @@ $$
 
 > 例如: 分析分组首部, 差错检验, 查找路由等过程
 
-**排队时延**: 结点缓存队列中分组排队所经历的时延.
+**排队时延**: 结点缓存队列中分组排队所经历的时延. (包括等待处理的输入队列和等待转发的输出队列)
 
 > 排队时延的长短, 往往取决于网络中当时的通信量.
 
@@ -331,7 +331,7 @@ $$
 
 ###### 产生延迟的位置
 
-![4 latency](chap_01.assets/c1-4-latency.png){: style="height:200px"}
+![4 latency.](chap_01.assets/c1-4-latency.png){: style="height:200px"}
 
 ###### 四种延迟的定义比较
 
@@ -358,7 +358,7 @@ $$
 
 > **例** (带宽与时延)
 >
-> ![example of link property](chap_01.assets/c1-link-property-example.png){: style="height:310px"}
+> ![example of link property.](chap_01.assets/c1-link-property-example.png){: style="height:310px"}
 
 #### 时延带宽积 (Bandwidth-delay Product)
 
@@ -368,7 +368,7 @@ $$
 
 如果将一对进程之间的**信道**看成一个中空的**管道**, **时延**相当于管道的长度, **带宽**相当于管道的截面积, 那么**时延和带宽的积**就是管道的**容积,** 即**链路上所能容纳的比特数**.
 
-![bandwidth-delay product](chap_01.assets/c1-bandwidth-delay-product.png){: style="height:80px"}
+![bandwidth-delay product.](chap_01.assets/c1-bandwidth-delay-product.png){: style="height:80px"}
 
 **管道中的比特数**表示**从发送端发出的尚未达到接收端的比特**, 对于一条正在传送数据的链路, 只有在代表链路的管道都充满比特时, 链路才得以充分利用.
 
@@ -397,7 +397,7 @@ $$
 
 > 完全空闲的信道, 其信道利用率为 0.
 
-![c1-utility-of-network](chap_01.assets/c1-utility-of-network.png){: style="height:150px" align=right}
+![c1-utility-of-network.](chap_01.assets/c1-utility-of-network.png){: style="height:150px" align=right}
 
 **信道利用率并非越高越好**. 根据排队论的理论, 当某信道的利用率增大时, 该信道引起的**时延**也就迅速增加.
 
@@ -483,7 +483,7 @@ $$
 
 #### 数据在各层次之间的传递过程示意图
 
-![c1-layered-model-mechanism](chap_01.assets/c1-layered-model-mechanism.png){ : style="height:250px"}
+![c1-layered-model-mechanism.](chap_01.assets/c1-layered-model-mechanism.png){ : style="height:250px"}
 
 > 注意: 传送比特流时, 应从**首部**开始传输.
 
@@ -497,7 +497,7 @@ $$
 
 网络协议的**层次**: 一台机器上的第 N 层与另一台机器上的第 N 层对话所使用的若干规则称为第 N 层协议.
 
-![c1-between-layers](chap_01.assets/c1-between-layers.png){ : style="height:150px"}
+![c1-between-layers.](chap_01.assets/c1-between-layers.png){ : style="height:150px"}
 
 **服务** (service): 由下层向上层通过层间接口提供.
 
@@ -522,7 +522,7 @@ $$
 
 TCP/IP 协议可以为各式各样的应用提供服务 (所谓的 everything over IP), 同时 TCP/IP 协议也允许 IP 协议在各式各样的网络构成的互联网上运行 (所谓的 IP over everything).
 
-![c1-tcpip-family](chap_01.assets/c1-tcpip-family.png){ : style="height:180px"}
+![c1-tcpip-family.](chap_01.assets/c1-tcpip-family.png){ : style="height:180px"}
 
 ## 更多
 

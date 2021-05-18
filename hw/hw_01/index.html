@@ -1,0 +1,1081 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>hw 01 - Notes for Computer Network</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hw-01" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Notes for Computer Network" class="md-header__button md-logo" aria-label="Notes for Computer Network" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes for Computer Network
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              hw 01
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/chuan-325/net-21sp/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chuan-325/net-21sp
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Notes for Computer Network" class="md-nav__button md-logo" aria-label="Notes for Computer Network" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Notes for Computer Network
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/chuan-325/net-21sp/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    chuan-325/net-21sp
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chap_01/" class="md-nav__link">
+        Chapter 1 计算机网络概述
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chap_02.md" class="md-nav__link">
+        Chapter 2 直连网络
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ex-1" class="md-nav__link">
+    Ex. 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-2" class="md-nav__link">
+    Ex. 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_1" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-3" class="md-nav__link">
+    Ex. 3
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_2" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-4" class="md-nav__link">
+    Ex. 4
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_3" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-5" class="md-nav__link">
+    Ex. 5
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_4" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-6" class="md-nav__link">
+    Ex. 6
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_5" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-7" class="md-nav__link">
+    Ex. 7
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_6" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-8" class="md-nav__link">
+    (※) Ex. 8
+  </a>
+  
+    <nav class="md-nav" aria-label="(※) Ex. 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_7" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-9" class="md-nav__link">
+    Ex. 9
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_8" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-10" class="md-nav__link">
+    Ex. 10
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_9" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-11" class="md-nav__link">
+    Ex. 11
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 11">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_10" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-12" class="md-nav__link">
+    Ex. 12
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_11" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-13" class="md-nav__link">
+    Ex. 13
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 13">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_12" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ex-14" class="md-nav__link">
+    Ex. 14
+  </a>
+  
+    <nav class="md-nav" aria-label="Ex. 14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution_13" class="md-nav__link">
+    Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/chuan-325/net-21sp/edit/master/docs/hw/hw_01.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="hw-01">hw 01<a class="headerlink" href="#hw-01" title="Permanent link">&para;</a></h1>
+<h2>Overview</h2>
+
+<ul>
+<li>第 1 章: 1, 2, 4, 3, 6</li>
+</ul>
+<ul>
+<li>第 2 章: 12, 9, 11, 13, 10, 7, 8</li>
+</ul>
+<ul>
+<li>第 3-4 章: 5, 14</li>
+</ul>
+<blockquote>
+<p>注意:</p>
+<ol>
+<li><strong>单位问题</strong>: 1KiB=1024B, 1KB=1000B.
+   "KiB" 即千位二进制字节 (kilo binary byte).
+   所以 1Kb 和 1kb 应该不分大小写都是 <code>1:1000</code> 的进制转换.</li>
+<li><strong>传输层/运输层?</strong> PPT 上都是传输层, 教材上都是运输层.
+   (这里指的都是 transport layer)</li>
+</ol>
+</blockquote>
+<h2 id="ex-1">Ex. 1<a class="headerlink" href="#ex-1" title="Permanent link">&para;</a></h2>
+<p>请从低至高依次写出 ISO/OSI RM 体系结构模型中每一层的名称.</p>
+<h3 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h3>
+<p>由低至高: 物理层, 数据链路层, 网络层, 传输层, 会话层, 表示层, 应用层.</p>
+<blockquote>
+<p>TCP/IP 协议是四层模型: 应用层, 运输层, 网际层, 网络接口层</p>
+</blockquote>
+<h2 id="ex-2">Ex. 2<a class="headerlink" href="#ex-2" title="Permanent link">&para;</a></h2>
+<p>计算机网络中的时延分为哪几种? 每种的意义是什么?</p>
+<h3 id="solution_1">Solution<a class="headerlink" href="#solution_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>时延种类</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>发送时延</td>
+<td>发送数据时, 数据块从结点进入传输介质所需要的时间</td>
+</tr>
+<tr>
+<td>传播时延</td>
+<td>电磁波在信道中传播一定的距离需要花费的时间</td>
+</tr>
+<tr>
+<td>处理时延</td>
+<td>主机或路由器在收到分组时进行一些必要的处理 (分析分组首部, 差错检验, 查找路由) 所花费的时间</td>
+</tr>
+<tr>
+<td>排队时延</td>
+<td>结点缓存队列中分组排队所经历的时延</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ex-3">Ex. 3<a class="headerlink" href="#ex-3" title="Permanent link">&para;</a></h2>
+<p>分别描述电路交换和分组交换的基本原理, 并分析说明计算机网络不采用电路交换的原因.</p>
+<h3 id="solution_2">Solution<a class="headerlink" href="#solution_2" title="Permanent link">&para;</a></h3>
+<p>电路交换: 是一种面向连接的交换, 建立连接后通过该连接传递信息.</p>
+<blockquote>
+<p>信息如果采用电路交换, 就需要先建立连接以占用通信资源, 并在通话期间持续占用通信资源, 在通话结束后释放连接以归还通信资源.</p>
+</blockquote>
+<p>分组交换: 核心在于对信息的分组转发.</p>
+<blockquote>
+<p>采用分组交换传递信息时,</p>
+<ol>
+<li>发送端将报文划分为较短的定长的数据段, 每个数据段前面添加上控制信息等作为首部构成分组, 然后发送各分组;</li>
+<li>中间结点以存储转发的形式将分组依次逐跳转发到目的端;</li>
+<li>接收端收到分组后, 剥去分组的首部, 将数据恢复成为原本的报文.</li>
+</ol>
+</blockquote>
+<h2 id="ex-4">Ex. 4<a class="headerlink" href="#ex-4" title="Permanent link">&para;</a></h2>
+<p>数据长度为 <span class="arithmatex">\(10^6\)</span> bits, 数据发送速率为 100 kb/s, 收发两端之间的传输距离为 1000km, 信号在媒体上的传播速率为 <span class="arithmatex">\(2\times 10^7\)</span> m/s, 请分别计算数据的发送时延和传播时延.</p>
+<h3 id="solution_3">Solution<a class="headerlink" href="#solution_3" title="Permanent link">&para;</a></h3>
+<p>发送时延:</p>
+<div class="arithmatex">\[
+T_{\text{send}} = \frac{10^6 {\rm bits}}{100{\rm kb/s}}=10 {\rm ms},
+%0.00103515625
+\]</div>
+<p>传播时延:</p>
+<div class="arithmatex">\[
+T_{\text{trans}} = \frac{1000 {\rm km}}{2\times 10^7 {\rm m/s}} = 50{\rm ms}
+%1/20
+\]</div>
+<blockquote>
+<p>做的时候两个都算错了, 一个抄错了数据, 一个计算错了一位.</p>
+</blockquote>
+<h2 id="ex-5">Ex. 5<a class="headerlink" href="#ex-5" title="Permanent link">&para;</a></h2>
+<p>集线器, 网桥, 路由器, 网关是计算机网络中的常见设备类型, 请分别描述这四类设备的作用层次和主要功能.</p>
+<h3 id="solution_4">Solution<a class="headerlink" href="#solution_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>参考答案:</p>
+<p><strong>集线器</strong>:
+<strong>物理层</strong>中间设备,
+主要作用是在物理层中实现透明的二进制比特复制,
+以补偿信号衰减/整形,
+使用集线器相连接的所有结点仍然在同一个碰撞域</p>
+<p><strong>网桥</strong>:
+<strong>数据链路层</strong>的中间设备,
+主要作用是根据 MAC 帧的目的地址对收到的帧进行转发.
+基于其过滤和转发帧功能,
+网桥将其连接的各网段隔离为不同的碰撞域</p>
+<p><strong>路由器</strong>:
+<strong>网络层</strong>的中间设备,
+作用是根据 IP 分组的目的地址对收到的 IP 分组进行转发</p>
+<p><strong>网关</strong>:
+<strong>网络层以上的中间系统</strong>,
+作用是在高层进行协议的转换以连接两个不兼容的系统</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>作用层次</th>
+<th>主要功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集线器</td>
+<td>物理层</td>
+<td>接收从某个端口输入的信号, 并向所有端口转发</td>
+</tr>
+<tr>
+<td>网桥</td>
+<td>数据链路层</td>
+<td>扩展局域网, 根据 MAC 地址过滤/转发帧</td>
+</tr>
+<tr>
+<td>路由器</td>
+<td>网络层</td>
+<td>实现分组转发, 为网络动态维护路由表</td>
+</tr>
+<tr>
+<td>网关</td>
+<td>网络层以上</td>
+<td>协议转换, 从而实现异构网络互连</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ex-6">Ex. 6<a class="headerlink" href="#ex-6" title="Permanent link">&para;</a></h2>
+<p>主机甲通过 1 个路由器 (存储转发方式) 与主机乙互联, 两段链路的数据传输速率均为 10Mbps, 主机甲分别采用报文交换和分组大小为 10 kb 的分组交换向主机乙发送 1 个大小为 7 Mb 的数据. 若忽略链路传播延迟, 头部开销和分组拆装时间, 则两种交换方式完成该数据传输所需的总时间分别为多少?</p>
+<h3 id="solution_5">Solution<a class="headerlink" href="#solution_5" title="Permanent link">&para;</a></h3>
+<p><strong>报文交换</strong>:
+主机甲向路由器发送整个 7Mb + 路由器向主机乙发送整个 7Mb</p>
+<div class="arithmatex">\[
+t_{\text{g}}=\frac{\rm 7Mb}{\rm 10Mbps}\times 2=1400{\rm ms}
+\]</div>
+<p><strong>分组交换</strong>: 主机甲发送第 2 个分组的同时,
+路由器已经开始向主机乙转发第 1 个分组,
+共 700 个分组.</p>
+<div class="arithmatex">\[
+t_{\text{p}}=
+\frac{\rm 7Mb}{\rm 10 Mbps}
++\frac{\rm 10kb}{\rm 10 Mbps}
+={\rm 701ms}
+\]</div>
+<blockquote>
+<p>注意:</p>
+<p>1M=1000k</p>
+</blockquote>
+<h2 id="ex-7">Ex. 7<a class="headerlink" href="#ex-7" title="Permanent link">&para;</a></h2>
+<p>共有 4 个节点进行码分多址 CDMA 通信. 假设 4 个节点的码片序列分别为:</p>
+<pre><code>A(-1+1-1-1-1-1+1-1)
+B(-1-1-1+1+1-1+1+1)
+C(-1-1+1-1+1+1+1-1)
+D(-1+1-1+1+1+1-1-1)
+</code></pre>
+<p>现收到这样的码片序列</p>
+<pre><code>S(-1+1-3+3+1-1-1+1)
+</code></pre>
+<p>请问节点 A, B, C, D 发送数据的情况?</p>
+<h3 id="solution_6">Solution<a class="headerlink" href="#solution_6" title="Permanent link">&para;</a></h3>
+<p>由于各个节点分配的码片序列相互正交, 因此作如下的计算:</p>
+<div class="arithmatex">\[
+%A -1+1-1-1-1-1+1-1
+S\cdot A=\frac{1}{m}\sum_{i=1}^{m}S_iA_i
+=\frac{1}{8}\times(1+1+3-3-1+1-1-1)=0
+;\\
+%B -1-1-1+1+1-1+1+1
+S\cdot B=\frac{1}{m}\sum_{i=1}^{m}S_iB_i
+=\frac{1}{8}\times(1-1+3+3+1+1-1+1)=1
+;\\
+%C -1-1+1-1+1+1+1-1
+S\cdot C=\frac{1}{m}\sum_{i=1}^{m}S_iC_i
+=\frac{1}{8}\times(1-1-3-3+1-1-1-1)=-1
+;\\
+%S -1+1-3+3+1-1-1+1
+%D -1+1-1+1+1+1-1-1
+S\cdot D=\frac{1}{m}\sum_{i=1}^{m}S_iD_i
+=\frac{1}{8}\times(1+1+3+3+1-1+1-1)=1.
+\]</div>
+<p>因此, A 未发送数据, B 和 D 发送 1, C 发送 0.</p>
+<h2 id="ex-8">(※) Ex. 8<a class="headerlink" href="#ex-8" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>第二次做还懵了一下.</p>
+</blockquote>
+<p>假定 1km 长的 CSMA/CD <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> 网络的链路带宽为 1Gb/s, 设信号在链路上的传播速率是 200000km/s, 请问能够使用此协议的最短帧长为多少?</p>
+<h3 id="solution_7">Solution<a class="headerlink" href="#solution_7" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>提示</strong>:</p>
+<p>Q: 为什么有 "最短帧长" ? 帧长太短了会发生什么?</p>
+<p>记端到端的传播时延为 τ, 最先发送的站点最多经过 2τ 就可以知道是否发生了碰撞,
+故称 <strong>2τ</strong> 为 <strong>争用期</strong> .
+只有经过争用期之后还没有检测到碰撞, 才能肯定这次发送不会发生碰撞.</p>
+<p>若帧长太短, 则还不知道是否发生碰撞就已经开始后续帧的发送, 这不好.</p>
+<p>适当的帧长保证在数据帧发送完毕的时间不小于碰撞能够被检测到的时间,
+也就是说, 帧长不小于 <strong>发送速率 × 最大碰撞检测时间</strong> (=带宽 ×RTT?)</p>
+</blockquote>
+<p>信号在链路上的单程传播时间</p>
+<div class="arithmatex">\[
+\tau=\frac{\rm 1km}{\rm 200000km/s}=5\mu s,
+\]</div>
+<p>因此最小帧发射时间不小于 <span class="arithmatex">\(2\tau=10\mu s\)</span>, 故可以使用此协议的最短帧长为</p>
+<div class="arithmatex">\[
+L_{\text{frame}}= 2\tau \times 1{\rm Gbps}=1\times 10^4 {\rm b},
+\]</div>
+<p>即 <span class="arithmatex">\(10^4\)</span> bit (or 10 kb).</p>
+<h2 id="ex-9">Ex. 9<a class="headerlink" href="#ex-9" title="Permanent link">&para;</a></h2>
+<p>对于带宽为 40kHz 的信道, 若有 4 种不同的物理状态来表示数据, 信噪比为 30dB. 按香农定理, 信道的最大传输数据速率是多少?</p>
+<h3 id="solution_8">Solution<a class="headerlink" href="#solution_8" title="Permanent link">&para;</a></h3>
+<p>信噪比单位转换: <span class="arithmatex">\(30{\rm dB}=10 \lg (S/N)\ ({\rm dB})\)</span>, 故 <span class="arithmatex">\(S/N=1000\)</span>.</p>
+<p>应用香农公式:</p>
+<div class="arithmatex">\[
+C= W\log_2 (1+S/N)
+\\=40\times 10^3{\rm Hz}\times\log_2(1+1000)
+\\\approx 398689.05{\rm bps}\approx 398.69{\rm kbps}
+%398689.0503534397
+\]</div>
+<p>信道的最大传输数据速率约为 398.69kbps.</p>
+<blockquote>
+<p>注意:</p>
+<p>不是奈氏定理, 不需要考虑 "物理状态种类".</p>
+</blockquote>
+<h2 id="ex-10">Ex. 10<a class="headerlink" href="#ex-10" title="Permanent link">&para;</a></h2>
+<p>假设需要为卫星站的一条 1Mbps 的点到点链路设计一个滑动窗口协议, 卫星在 <span class="arithmatex">\(3\times 10^4\)</span> km 的高度绕地球同步旋转. 假设每帧携带 1KB 数据, 发送窗口大小和接收窗口大小一样 (RWS = SWS) , 请问需要多少比特作为标识数据帧的序号? (光速为 <span class="arithmatex">\(3\times 10^8\)</span> m/s)</p>
+<h3 id="solution_9">Solution<a class="headerlink" href="#solution_9" title="Permanent link">&para;</a></h3>
+<p>单程传播时延: (传播时延一般和物理介质之类的有关, 这里传播时延 τ=路程长度/光速)</p>
+<div class="arithmatex">\[
+t_1=\frac{3\times10^4{\rm km}}{3\times10^8{\rm m/s}}=0.1{\rm s}
+\]</div>
+<p>每秒可以传输帧数: (秒传数据=带宽, 求帧数需要再除以帧的大小)</p>
+<div class="arithmatex">\[
+\#(frame)=\frac{\rm 1Mbps\times 1s}{\rm 8\times10^3 bit}=125
+\]</div>
+<blockquote>
+<p><strong>重点</strong>:
+怎么确定发送窗口大小呢?</p>
+<p>答案: 避免发生碰撞, 需要保证帧传输时间不小于碰撞检测时间 2τ,</p>
+<p>可以参考 <a href="#Ex-8">Ex. 8</a>.</p>
+</blockquote>
+<p>可得发送窗口大小 (帧数):</p>
+<div class="arithmatex">\[
+\text{SWS}=125\times0.1\times2=25
+\]</div>
+<blockquote>
+<p><strong>重点</strong>:
+怎么根据窗口大小确定 MaxSeqNum 呢?</p>
+<p>答案: <code>SWS+RWS &lt; MaxSeqNum</code>.</p>
+</blockquote>
+<p>由 <span class="arithmatex">\(\text{SWS=RWS}\)</span> 得 <span class="arithmatex">\(\text{SWS}&lt;\frac{\text{MaxSeqNum+1}}{2}\)</span>, 因此需要至少 50 个序号, 对应 <span class="arithmatex">\(\lceil\log_2 50\rceil=6\)</span> 个比特.</p>
+<h2 id="ex-11">Ex. 11<a class="headerlink" href="#ex-11" title="Permanent link">&para;</a></h2>
+<p>采用循环冗余校验技术作为差错检测方案, 要发送的数据为 <code>1101011011</code>, CRC 生成多项式是 <span class="arithmatex">\(P(X)=X^4+X+1\)</span>.</p>
+<ol>
+<li>求应添加在数据后面的余数.</li>
+<li>若数据在传输过程中数据部分的最后两个 1 都变成了 0, 问接收端能否发现?</li>
+<li>采用 CRC 检验后, 数据链路层的传输是否就变成了可靠的传输?</li>
+</ol>
+<h3 id="solution_10">Solution<a class="headerlink" href="#solution_10" title="Permanent link">&para;</a></h3>
+<h4 id="1">(1)<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<p>将 <code>11010110110000</code> 除以 <code>10011</code> , 得到 <code>1110</code> , 所以余数是 <code>1110</code> .</p>
+<h4 id="2">(2)<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p>能发现, 因为 <code>11010110001110</code> 除以 <code>10011</code> 会得到余数 <code>101</code> , 也就是说不能整除.</p>
+<h4 id="3">(3)<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>不是. 采用 CRC 检验技术, 只能做到无差错接受, 使接受的帧在传输过程中基本不产生差错, 出错的帧会被接收方丢弃, 但可靠传输还要求能够恢复被丢弃的帧, 因此 CRC 检验技术加上合适的重传/恢复机制才能称为可靠传输.</p>
+<blockquote>
+<p><strong>参考答案</strong>:</p>
+<p>采用 CRC 检验后, 数据链路层的传输并没有成为可靠的传输.
+差错检测技术只能帮助接收端实现无差错接收, 即通过检测判断消息无差错则接收该消息;
+若判断该消息出错, 则丢弃该消息.</p>
+<p>无比特差错与无传输差错不同,
+差错检测技术并不能保证消息在传输过程中不发生帧丢失, 重复, 失序等错误,
+消息的可靠传输需要通过停等算法, 滑动窗口算法等可靠传输机制实现.</p>
+</blockquote>
+<h2 id="ex-12">Ex. 12<a class="headerlink" href="#ex-12" title="Permanent link">&para;</a></h2>
+<p>直连网络是节点之间通过点对点/多路访问链路互联而形成的网络形态. 构建直连网络的关键技术包括: 信道编码, 组帧, 错误检测, 可靠传输, 介质访问控制. 请回答以下问题:</p>
+<ol>
+<li>分别简要描述上述各项关键技术的目的;</li>
+<li>针对每项关键技术, 给出 1 种典型的解决方案的名称并简要描述其设计原理.</li>
+</ol>
+<h3 id="solution_11">Solution<a class="headerlink" href="#solution_11" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">(1) 目的<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>参考答案</strong>:</p>
+<p>信道编码:
+把比特编码后传送到物理传输介质（链路）上,
+使其能被收方主机接收并理解,
+如: 曼彻斯特编码</p>
+<p>组帧:
+将比特序列描述为完整的消息, 形成一个帧,
+如: <strong>起始标记法</strong></p>
+<p>错误检测:
+检测传输过程中出现的错误并采取适当行动,
+如: CRC</p>
+<p>可靠传输:
+建立一个看起来可靠的链路,
+如: 滑动窗口算法, 停等算法</p>
+<p>介质访问控制:
+一条链路由多个主机共享时,
+协调主机对链路的访问,
+如: CDMA, CSMA/CD</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>技术</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信道编码</td>
+<td>将基带信号转换为<strong>适用于信道传输</strong>的信号</td>
+</tr>
+<tr>
+<td>组帧</td>
+<td>将比特序列组织为帧, 以便在结点之间传送, 使数据能被接收, 提取和检错</td>
+</tr>
+<tr>
+<td>错误检测</td>
+<td>发现传输差错, 在发现错误时丢弃并重传, 保证数据传输的比特准确性</td>
+</tr>
+<tr>
+<td>可靠传输</td>
+<td>保证接收端收到的数据就是发送端发送的数据 (<strong>可靠</strong>)</td>
+</tr>
+<tr>
+<td>介质访问控制</td>
+<td>实现<strong>信道复用</strong>, 支持多点接入, 提高通信资源利用效率</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2_1">(2)<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>技术</th>
+<th>1 个解决方案</th>
+<th>方案原理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信道编码</td>
+<td>差分曼彻斯特编码</td>
+<td>以相邻周期反相/同相标识 1/0, 消除直流分量, 方便提取时钟周期</td>
+</tr>
+<tr>
+<td>组帧</td>
+<td>高级数据链路控制协议 (HDLC), 面向比特组帧</td>
+<td>将帧看作比特集, 使用标志字段来标识首位, 使用比特填充法避免标识字段引起歧义</td>
+</tr>
+<tr>
+<td>错误检测</td>
+<td>循环冗余校验 (CRC)</td>
+<td>利用有限域 (模 2) 上多项式, 在数据末尾加上余数扩展消息, 通过在接收端检测除以生成多项式是否整除来检错</td>
+</tr>
+<tr>
+<td>可靠传输</td>
+<td>滑动窗口算法</td>
+<td>在窗口大小的范围内: (1)发送端保持信道满载, 并发传输数据; (2) 接收端确认接收到的数据, 超时请求重发数据</td>
+</tr>
+<tr>
+<td>介质访问控制</td>
+<td>CSMA</td>
+<td>广播链路多点接入, 结点在发送前检测信道是否忙碌来决定是否发送, 尽力避免碰撞.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ex-13">Ex. 13<a class="headerlink" href="#ex-13" title="Permanent link">&para;</a></h2>
+<p>停等算法 (stop and wait) 和滑动窗口算法 (sliding window) 是实现可靠传输的典型机制, 请回答以下问题:</p>
+<ol>
+<li>描述停等算法的基本原理;</li>
+<li>分析停等算法在数据传输效率方面存在的问题;</li>
+<li>描述滑动窗口算法的基本原理, 并分析滑动窗口算法能够提升数据传输效率的原因.</li>
+</ol>
+<h3 id="solution_12">Solution<a class="headerlink" href="#solution_12" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">(1)<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<p>停等算法的基本原理:</p>
+<ol>
+<li>(停等) 发送方传输一帧后, 等到接收方发送一个对该帧的 ACK 后再传输下一帧;</li>
+<li>(重传) <strong>如果 ACK 在一段时间后没有到达, 发送方认为超时, 重新发送该帧</strong>.</li>
+</ol>
+<h4 id="2_2">(2)<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<ol>
+<li>停等算法下, 链路上只允许有一个未确认的帧, 造成链路容量大量空闲.</li>
+</ol>
+<p>*2. 如果超时时长设置不合理, 会导致发送方反复发送重复帧, 造成通信资源浪费.</p>
+<h4 id="3_1">(3)<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<p>滑动窗口算法的基本原理:</p>
+<ol>
+<li><strong>发送方</strong>缓存 SWS 个帧, 并发传输多个帧:<ol>
+<li>维护发送窗口大小 SWS, 最近被确认帧 LAR 和最近发送帧 LFS;</li>
+<li>收到 ACK 后右移窗口更新 LAR, 窗口允许时发送新的帧, 更新 LFS;</li>
+<li>为每帧设置定时器, 若收到 ACK 前超时则重传该帧</li>
+</ol>
+</li>
+<li><strong>接收方</strong>只落在接收窗口内的帧, 并将最大连续帧 SeqNum 作为 Ack 回复:<ol>
+<li>维护接收窗口大小 RWS, 最大可接收帧 LAF, 最后确认接收帧 LFR;</li>
+<li>收到帧时, 如果帧在窗口内 (LFR≤SeqNum≤LAF) 则接收, 否则丢弃; 将收到的最大连续数据帧的 SeqNum 作为 ACK 回复发送方.</li>
+</ol>
+</li>
+</ol>
+<p>滑动窗口算法<strong>允许链路上有某个数量以内的未确认帧</strong>, 这是它对停等算法最显著的改进, 这使得链路容量能够被充分利用, 从而提升了数据传输效率. (因为发送窗口里的分组可以不需要等待对方确认直接连续发送)</p>
+<h2 id="ex-14">Ex. 14<a class="headerlink" href="#ex-14" title="Permanent link">&para;</a></h2>
+<p>下图中包含三类网络节点: 集线器, 交换机, 路由器.</p>
+<p><img alt="ex-14" src="../hw_01.assets/ex14-fig.png" /></p>
+<p>请回答以下问题:</p>
+<ol>
+<li>简述交换机和路由器分别工作于网络体系结构中的哪一层, 其基本功能是什么?</li>
+<li>这个网络中有几个冲突域, 几个广播域?</li>
+</ol>
+<h3 id="solution_13">Solution<a class="headerlink" href="#solution_13" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">(1)<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>层次</th>
+<th>基本功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交换机</td>
+<td>数据链路层</td>
+<td>(对接入交换机的结点,) 根据 <strong>MAC 帧</strong> 的目的地址决定向何端口转发, 能够隔离碰撞域</td>
+</tr>
+<tr>
+<td>路由器</td>
+<td>网络层</td>
+<td>(接收 IP 分组,) 根据 <strong>IP 分组</strong> 目的地址决定该分组的转发路由 (下一跳往哪个路由器/目的主机转发), 能够隔离广播域和碰撞域</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2_3">(2)<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h4>
+<p>该网络中有 3 个冲突域 (碰撞域), 2 个广播域.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="https://www.zhihu.com/question/67473683/answer/254496942">如何通俗地解释什么是网桥？ - 肖宏辉的回答 - 知乎</a></li>
+<li><a href="http://www.mwrf.net/tech/basic/2018/24694.html">老司机解读香农定理, 奈奎斯特定理, 编码与调制 - 微波基础知识 - 微波射频网</a></li>
+</ol>
+<!--以下 Footnotes-->
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>(CSMA/CD) 即带碰撞检测的 CSMA. CSMA 即 "载波侦听多点接入".&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
